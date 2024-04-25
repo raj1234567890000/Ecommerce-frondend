@@ -1,13 +1,604 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/*font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+*/
+/*dark mode*/
+.light {
+  /* Light mode specific styles */
+  background-color: #ffffff;
+  color: #000000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark {
+  /* Dark mode specific styles */
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* headers*/
+#collapsible-nav-dropdown {
+  color: yellow;
+  font-size: 19px;
+  background-color: #000000;
+  border-radius: 10px;
+}
+.navlinks {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-decoration: none;
+  padding-right: 20px;
+  font-size: 17px;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-left: 25px;
+}
+
+.navbar {
+  background: linear-gradient(to right, rgb(27, 226, 226), teal);
+  box-shadow: 1px 8px 6px -6px rgb(210, 63, 63);
+}
+.active {
+  color: #ffd86e;
+  border-bottom: 2px solid black;
+}
+.brand {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "roboto", sans-serif;
+}
+.bag {
+  color: white;
+  margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+/*all headres  categories  here*/
+.allcategories {
+  padding-left: 20px;
+  margin-left: 420px;
+  background-color: #10506e;
+  height: 50px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 10px 10px #dfeef5;
+  transition: all ease-in-out 0.4s;
+}
+.allcategories:hover {
+  background-color: #1a7aa6;
+  transform: translate3d(10px, 10px, 0);
+}
+.categories {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s ease;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+.all {
+  background-color: white;
+}
+/*footer*/
+
+.Footer {
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+}
+.footer {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.footer:hover {
+  color: #ffefba;
+  border-bottom: 1px solid red;
+}
+
+.home {
+  margin-left: 20px;
+}
+body {
+  overflow-x: hidden;
+}
+
+/*registration form and login form start here*/
+
+.registerheading {
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 900;
+}
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 76.5vh;
+  flex-direction: column;
+  
+}
+
+.allinputs {
+  background-color: white;
+  border: none;
+  width: 400px;
+  height: 60vh;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 10px 2px 25px 25px rgb(228, 242, 251) ;
+}
+.inputs {
+  width: 370px;
+  margin-left: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 5px;
+}
+
+.registerbtn {
+  margin-left: 8px;
+  margin-top: 10px;
+  width: 380px;
+  background-color: #053938;
+  color: rgb(250, 228, 228);
+  font-size: 20px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  transition: all ease-in-out 0.3s;
+}
+.registerbtn:hover {
+  background-color: #0f8e61;
+}
+/*login form here*/
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 76.5vh;
+  flex-direction: column;
+ 
+}
+.loginallinputs {
+  background-color: white;
+  border: none;
+  width: 400px;
+  height: 30vh;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 25px 25px rgb(228, 242, 251) ;
+}
+/* forget pasword here*/
+
+.forgetpassword {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 76.5vh;
+  flex-direction: column;
+  
+}
+.forgetinputs {
+  background-color: white;
+  border: none;
+  width: 400px;
+  height: 30vh;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 25px 25px rgb(228, 242, 251) ;
+}
+/*about us page here*/
+.abouthead {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3em;
+  text-decoration: underline;
+  font-weight: 600;
+  color: rgb(161, 146, 65);
+}
+.aboutimg {
+  border-radius: 10px;
+  margin-top: 7px;
+  margin-left: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.aboutpara {
+  font-size: 17px;
+  text-transform: capitalize;
+  line-height: 1.8;
+  font-weight: 500;
+}
+/*conatct us page here*/
+.contactimg {
+  margin-top: 110px;
+  border-radius: 5px;
+  width: 600px;
+}
+.conatacthead {
+  margin-left: 5px;
+  margin-top: 110px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+/*policy page here*/
+.privacyimage {
+  margin-top: 140px;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+
+.privacyhead {
+  margin-top: 50px;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background-color: teal;
+  text-align: center;
+  margin-right: 220px;
+  border-radius: 5px;
+  color: white;
+}
+.policypara {
+  margin-left: 170px;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.8;
+}
+
+/* home page start here */
+.allhome {
+  border-radius: 10px;
+  margin-left: 22px;
+  background-color: #f9fdff;
+}
+.filterhead {
+  color: black;
+  margin-left: 8px;
+  margin-top: 10px;
+  width: 195px;
+  text-transform: capitalize;
+
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.filtercategory {
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-bottom: 1px solid rgb(77, 157, 188);
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.pricehead {
+  color: black;
+  margin-left: 8px;
+  margin-top: 10px;
+  width: 195px;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+.filterradio {
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-bottom: 1px solid skyblue;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.resetbtn {
+  width: 300px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgb(91, 13, 13);
+  text-transform: capitalize;
+  margin: 10px 10px;
+  color: white;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+.resetbtn:hover {
+  background-color: rgb(168, 43, 43);
+}
+
+.allproducts {
+  margin-left: 70px;
+}
+
+.cardbody {
+background-color: #efe7e7;
+  font-size: 20px;
+  height: 26vh;
+  width: 287px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: capitalize;
+  color: black;
+}
+.productimg {
+  height: 200px;
+  width: 200px;
+  transition: all ease-in-out 0.7s;
+}
+.productimg:hover {
+  transform: scale(1.1);
+}
+
+.productbtns {
+  margin-top: 80px;
+  margin-left: 80px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 290px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: inline-start;
+  line-height: 1.5;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: rgb(207, 228, 198);
+  color: white;
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-back {
+  transform: rotateX(180deg);
+}
+
+/*product details page here */
+.allproductdetals {
+  background: linear-gradient(to top, #676d6f, #000000);
+}
+.allproductdetals:hover {
+  background: linear-gradient(to left, #4c6269, #09c2ac);
+  transform: translateY(1px);
+}
+.product-image {
+  margin-top: 30px;
+  height: 280px;
+  margin-left: 190px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.product-details {
+  color: white;
+  margin-top: 50px;
+  margin-right: 450px;
+  text-transform: capitalize;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.producydatails {
+  color: white;
+  text-transform: capitalize;
+  line-height: 1.6;
+  margin-top: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.productbtn {
+  margin-bottom: 20px;
+  height: 5vh;
+  width: 600px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-transform: capitalize;
+  background-color: rgb(20, 115, 95);
+  color: white;
+  border: none;
+}
+.productbtn:hover {
+  background-color: rgb(84, 152, 179);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 1px 1px 1px 2px;
+}
+.similarproduct {
+  text-align: center;
+  font-size: 25px;
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.allsimliarproduct {
+  margin-left: 150px;
+  margin-top: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+}
+.similarig {
+  height: 250px;
+  width: 250px;
+}
+.similarproducttext {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 500;
+}
+/* admin menu page*/
+.adminnav {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease-in-out;
+  list-style: none;
+}
+.categoryform {
+  width: 400px;
+
+  height: 5vh;
+  text-align: center;
+  margin-left: 40px;
+  border-radius: 10px;
+  border: 1px solid rgb(81, 162, 26);
+}
+.adminbtn {
+  width: 400px;
+  margin-left: 40px;
+  height: 5vh;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+}
+.menucategeory {
+  text-align: center;
+  text-transform: capitalize;
+}
+.editbtn {
+  margin-left: 40px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(69, 183, 4);
+  border-radius: 3px;
+}
+.deletebtn {
+  margin-left: 40px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: red;
+  border-radius: 3px;
+}
+
+.allproductshere {
+  text-align: center;
+  text-transform: capitalize;
+  color: #96139d;
+  text-decoration: underline;
+}
+.producthereimg {
+  width: 200px;
+  height: 35vh;
+}
+.product-list {
+  text-decoration: none;
+  font-size: 17px;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 600;
+}
+/*cart section here */
+.cardimgtop {
+  width: 220px;
+  height: 220px;
+  padding-right: 30px;
+  border-right: 3px solid rgb(62, 160, 62);
+  height: 220px;
+}
+.cartjsname {
+  text-transform: capitalize;
+  margin-left: 100px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+.removebtncart {
+  margin-left: 70px;
+  margin-top: 20px;
+  width: 500px;
+  height: 5vh;
+  background-color: red;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+/*search image products*/
+
+.srachcard{
+  margin-left: 90px;
+}
+.searchimg{
+  width: 200px;
+  height: 250px;
+}
+.searchcard{
+  height: 175px;
+  text-transform: capitalize;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+ font-size: 17px;
+ background-color: #ece4e4;
+ font-weight:600 ;
+}
+.categorycollectionimg{
+  height: 250px;
+}
+.categorucollectionbody{
+  height: 210px;
+  text-transform: capitalize;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+ font-size: 17px;
+ background-color: #ece4e4;
+ font-weight:600 ;
 }

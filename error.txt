@@ -1,0 +1,11 @@
+1.loading bar error(solved)
+2. search box not working properly(error solved)
+3.errror in update profile in addresh section
+4.error in payment gateway(error solved )
+5.error in user order 
+
+mercgant id -ssf9p3k82ngxqmr9
+public key- c57b844963sdsgnr
+private key-465674d997a6c678c6fca30428cd3a75
+
+7668718745
