@@ -12,7 +12,7 @@ const Product = () => {
     //get all product list here
     const getAllProducts=async()=>{
         try{
-            const{data}=await axios.get(`http://localhost:8080/api/v1/product/get-product`);
+            const{data}=await axios.get(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/get-product`);
             setProducts(data.products)
         }catch(error){
 console.log(error);
@@ -40,7 +40,7 @@ toast.error("Error Occurred in fetching data")
                     <>
                      <Link to={`/dashboard/admin/products/${p.slug}` } key={p._id} className='product-list'>
                      <Card style={{ width: '18rem' }} className='card m-2'>
-      <Card.Img variant="top" src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`} alt={p.name} className='producthereimg' />
+      <Card.Img variant="top" src={`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-photo/${p._id}`} alt={p.name} className='producthereimg' />
       <Card.Body >
         <Card.Text >name : {p.name}</Card.Text>
         <Card.Text >

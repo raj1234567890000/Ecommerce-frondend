@@ -26,7 +26,7 @@ e.preventDefault( );
 //toast.success("user Registration successfully!")
 try{
 
-const {data}=  await axios.put(`http://localhost:8080/api/v1/auth/profile`,{
+const {data}=  await axios.put(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/auth/profile`,{
   name,
   email,
   password,

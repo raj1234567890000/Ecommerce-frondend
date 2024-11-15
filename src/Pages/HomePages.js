@@ -29,7 +29,7 @@ const[cart,setCart]=useCart()
   const getTotal=async()=>{
     try{
     
-const{data}=await axios.get(`http://localhost:8080/api/v1/product/product-count`)
+const{data}=await axios.get(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-count`)
 setTotal(data?.totals)
 
 
@@ -46,7 +46,7 @@ setTotal(data?.totals)
   // Get all  categories
   const getAllCategory=async()=>{
     try{
-const {data}=await axios.get(`http://localhost:8080/api/v1/category/get-category`)
+const {data}=await axios.get(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/category/get-category`)
 if(data?.success){
   setCategories(data?.category)
 }
@@ -70,7 +70,7 @@ if(data?.success){
     //get filter products
     const  filterProduct=async()=>{
       try{
-        const {data}=await  axios.post(`http://localhost:8080/api/v1/product/product-filter`,{checked,radio})
+        const {data}=await  axios.post(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-filter`,{checked,radio})
         setProducts(data?.products)
       }catch(error){
       console.log(error)
@@ -82,7 +82,7 @@ if(data?.success){
   const getAllProducts=async()=>{
     try{
       setLoading(true);
-const{data}= await  axios.get(`http://localhost:8080/api/v1/product/product-list/${page}`)
+const{data}= await  axios.get(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-list/${page}`)
 setLoading(false);
       setProducts(data.products)
       
@@ -117,7 +117,7 @@ getAllProducts();
   const  loadMore = async() => {
     try{
       setLoading(true)
-const{data}=await axios.get(`http://localhost:8080/api/v1/product/product-list/${page}`)
+const{data}=await axios.get(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-list/${page}`)
 setLoading(false)
 setProducts([...products,...data?.products])
     }catch(error){
@@ -195,7 +195,7 @@ console.log(error)
               <>
                 <div className='allproducts'>
               <Card style={{ width: '18rem' }} className='card m-2 card'>
-<Card.Img variant="top" src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`} alt={p.name}  className='productimg'
+<Card.Img variant="top" src={`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-photo/${p._id}`} alt={p.name}  className='productimg'
 />
 <div class="flip-box">
   <div class="flip-box-inner">

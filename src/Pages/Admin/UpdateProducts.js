@@ -80,7 +80,7 @@ try{
   productData.append('category',category)
  
 
-  const{data}= await axios.put(`http://localhost:8080/api/v1/product/update-product/${id}`,productData)
+  const{data}= await axios.put(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/update-product/${id}`,productData)
   if(data?.success){
     toast.success(data?.message);
     navigate('/dashboard/admin/product');
@@ -105,7 +105,7 @@ try{
       try{
         let answer=window.prompt("Are you sure want to dalete this product ?")
         if(!answer) return
-const {data} =await axios.delete(`http://localhost:8080/api/v1/product/delete-product/${id}`);
+const {data} =await axios.delete(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/delete-product/${id}`);
 
 toast.success(data?.message);
 navigate('/dashboard/admin/product');
@@ -152,7 +152,7 @@ toast.error("Error in delete the product")
                   ):(
                     <div className='text-center' >
                          
-                   <img src={`http://localhost:8080/api/v1/product/product-photo/${id}`} alt="product _image" height='250px' width='250px' className='img img-responsive'/>
+                   <img src={`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-photo/${id}`} alt="product _image" height='250px' width='250px' className='img img-responsive'/>
 
                   </div>
                   )

@@ -22,7 +22,7 @@ const CreateCatageory = () => {
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try{
-const{data}=await axios.post(`http://localhost:8080/api/v1/category/create-category`,{name});
+const{data}=await axios.post(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/category/create-category`,{name});
 if(data?.success){
   toast.success(`${name} added successfully`)
   getAllCategory();
@@ -40,7 +40,7 @@ if(data?.success){
   //get all catagories data
   const getAllCategory=async()=>{
     try{
-const {data}=await axios.get(`http://localhost:8080/api/v1/category/get-category`)
+const {data}=await axios.get(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/category/get-category`)
 if(data?.success){
   setCatagories(data?.category)
 }
@@ -59,7 +59,7 @@ if(data?.success){
   const handleUpdate=async(e)=>{
 e.preventDefault(e);
 try{
- const {data}=await axios.put(`http://localhost:8080/api/v1/category/update-category/${selected._id}`,{name:updateName});
+ const {data}=await axios.put(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/category/update-category/${selected._id}`,{name:updateName});
  if(data.success){
   toast.success(`${updateName}is updated`);
   setSelected(null);
@@ -80,7 +80,7 @@ toast.error("Something Went Wrong In Updating Category");
   const handleDelete=async(id)=>{
     
     try{
-     const {data}=await axios.delete(`http://localhost:8080/api/v1/category/delete-category/${id}`);
+     const {data}=await axios.delete(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/category/delete-category/${id}`);
      if(data.success){
       toast.success(`category is deleted successyully`);
     

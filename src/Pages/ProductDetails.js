@@ -18,7 +18,7 @@ const ProductDetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/get-product/${params.slug}`
+        `https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/get-product/${params.slug}`
       );
       console.log("data", data);
       setProduct(data?.product);
@@ -36,7 +36,7 @@ const ProductDetails = () => {
   const getSimilarProducts = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/related-product/${pid}/${cid}`
+        `https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/related-product/${pid}/${cid}`
       );
       console.log("similarproducts", data);
       setRelatedProducts(data?.products);
@@ -49,7 +49,7 @@ const ProductDetails = () => {
         <div className="row  conatiner mt-2">
           <div className="col-md-6 allproductdetals">
             <img
-              src={`http://localhost:8080/api/v1/product/product-photo/${product._id}`}
+              src={`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-photo/${product._id}`}
               alt={product.name}
               className="product-image"
               width="250"
@@ -97,7 +97,7 @@ const ProductDetails = () => {
                 <Card style={{ width: "18rem" }} className="card m-2">
                   <Card.Img
                     variant="top"
-                    src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                    src={`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-photo/${p._id}`}
                     alt={p.name}
                     className="similarig"
                   />

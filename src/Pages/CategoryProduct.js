@@ -17,7 +17,7 @@ const CategoryProduct = () => {
     const navigate=useNavigate();
     const getProductsByCat=async()=>{
         try{
-const {data}=await axios.get(`http://localhost:8080/api/v1/product/product-category/${params.slug}`);
+const {data}=await axios.get(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-category/${params.slug}`);
 setProducts(data?.products);
 setCategory(data?.category);
 
@@ -44,7 +44,7 @@ if(params?.slug)getProductsByCat()
             <>
               
             <Card style={{ width: '18rem' }} className='card m-2'>
-<Card.Img variant="top" src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`} alt={p.name} className='categorycollectionimg' />
+<Card.Img variant="top" src={`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-photo/${p._id}`} alt={p.name} className='categorycollectionimg' />
 <Card.Body className='categorucollectionbody'>
 <Card.Title>Name :{p.name}</Card.Title>
 <Card.Text> description :{p.description.substring(1, 16)}...</Card.Text>

@@ -23,7 +23,7 @@ const Search = () => {
         {
 values?.result.map((product) => (
   <Card key={product._id} style={{ width: '18rem' }} className='card m-4 srachcard'>
-    <Card.Img variant="top" src={`http://localhost:8080/api/v1/product/product-photo/${product._id}`} alt={product.name} className='searchimg' />
+    <Card.Img variant="top" src={`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/product-photo/${product._id}`} alt={product.name} className='searchimg' />
     <Card.Body className='searchcard'>
       <Card.Title > name : {product.name}</Card.Title>
       <Card.Text  >description : {product.description.slice(1, 5)}...</Card.Text>
