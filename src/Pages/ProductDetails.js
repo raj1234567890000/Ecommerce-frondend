@@ -61,7 +61,7 @@ const ProductDetails = () => {
             <h6 className="producydatails">
               description : {product.description}
             </h6>
-            <h6 className="producydatails">price : ${product.price}</h6>
+            <h6 className="producydatails">price :{product.price} Rs</h6>
             <h6 className="producydatails">
               category : {product.category?.name}
             </h6>
