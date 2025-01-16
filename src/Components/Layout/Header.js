@@ -31,9 +31,7 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-          <SearchInput />
-            <NavLink to="/" className="navlinks" >Home</NavLink>
-            <NavLink to="/categories" className="navlinks" >All Categories</NavLink>      
+           
                  {
             !auth.user ?  (
               <>
@@ -43,7 +41,10 @@ function Header() {
               </>
             ):(
               <>
-            
+               <SearchInput />
+            <NavLink to="/" className="navlinks" >Home</NavLink>
+            <NavLink to="/categories" className="navlinks" >All Categories</NavLink>    
+         
           <NavDropdown title={auth?.user?.name} id="collapsible-nav-dropdown" >
           
           <NavLink to={`/dashboard/${auth?.user?.role === 1 ? "admin":"user"}` }className="navlinks" style={{color:"black"}}>dashboard</NavLink>
@@ -54,15 +55,17 @@ function Header() {
              
              
             </NavDropdown>
+            <Badge count={cart?.length} showZero>
+           <NavLink to="/cart"className="navlinks" >cart</NavLink>  
+            
+            </Badge> 
+            
          
               </>
             )
             
            }
-           <Badge count={cart?.length} showZero>
-           <NavLink to="/cart"className="navlinks" >cart</NavLink>  
-            
-            </Badge> 
+         
              
           </Nav>
           <Nav>           

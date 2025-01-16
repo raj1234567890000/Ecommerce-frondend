@@ -110,7 +110,7 @@ const ProductDetails = () => {
                       description : {p.description.substring(1, 20)}
                     </Card.Text>
                     <Card.Text className="similarproducttext">
-                      price : ${p.price}
+                      price :{p.price} Rs
                     </Card.Text>
                     <Button
                       variant="primary ms-1 "

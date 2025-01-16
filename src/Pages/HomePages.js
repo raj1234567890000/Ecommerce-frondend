@@ -203,7 +203,7 @@ console.log(error)
     <Card.Body className='cardbody'>
  <Card.Title className='pname' style={{color:"black"}}>Name : {p.name}</Card.Title>
  <Card.Text className='pdesc' style={{color:"black"}} > Description : {p.description.substring(1, 60)}</Card.Text>
- <Card.Text className='pprice'  style={{color:"red",textDecoration:"underline"}}>Price : ${p.price}</Card.Text>
+ <Card.Text className='pprice'  style={{color:"red",textDecoration:"underline"}}>Price :{p.price}Rs</Card.Text>
  
 </Card.Body>
     </div>
