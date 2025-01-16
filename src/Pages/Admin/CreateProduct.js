@@ -24,7 +24,7 @@ const navigate=useNavigate();
     //get all catagories data
     const getAllCategory=async()=>{
       try{
-  const {data}=await axios.get(`http://localhost:8080/api/v1/category/get-category`)
+  const {data}=await axios.get(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/category/get-category`)
   if(data?.success){
     setCategories(data?.category)
   }
