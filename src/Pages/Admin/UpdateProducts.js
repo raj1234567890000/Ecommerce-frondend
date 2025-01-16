@@ -26,7 +26,7 @@ const [id, setId] = useState("");
 
 const singleProduct=async()=>{
     try{
-const {data}=await axios.get(`http://localhost:8080/api/v1/product/get-product/${params.id}`);
+const {data}=await axios.get(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/product/get-product/${params.id}`);
 setName(data.product.name)
 setDescription(data.product.description)
 setPrice(data.product.price)
@@ -50,7 +50,7 @@ useState(()=>{
     //get all catagories data
     const getAllCategory=async()=>{
       try{
-  const {data}=await axios.get(`http://localhost:8080/api/v1/category/get-category`)
+  const {data}=await axios.get(`https://ecommerce-app-backend-qsdk.onrender.com/api/v1/category/get-category`)
   if(data?.success){
     setCategories(data?.category)
   }
