@@ -44,7 +44,7 @@ toast.error("Error Occurred in fetching data")
       <Card.Body >
         <Card.Text >name : {p.name}</Card.Text>
         <Card.Text >
-        description : {p.description}
+        description : {p.description.substring(1, 60)}
         </Card.Text>
        
       </Card.Body>
